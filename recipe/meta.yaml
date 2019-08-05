@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -36,7 +36,8 @@ requirements:
     - python
     - setuptools
     - future
-    - numpy
+    # see obspy/obspy#2434
+    - numpy <1.17
     - scipy
     - matplotlib
     - lxml
