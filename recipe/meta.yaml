@@ -11,6 +11,10 @@ source:
   url: https://github.com/obspy/obspy/files/4108546/obspy-1.2.0rc1.zip
   sha256: {{ sha256 }}
 
+# for RC builds
+channel_targets:
+  - conda-forge rc_obspy
+
 build:
   number: 0
   preserve_egg_dir: yes
